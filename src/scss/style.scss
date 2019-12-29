@@ -130,3 +130,69 @@
     border-radius: 6px;
   }
 }
+
+//SECTION ABOUT
+.section-about {
+  display: flex;
+  margin-left: 34px;
+  margin-right: 28px;
+  margin-top: 20px;
+  width: 100%;
+}
+.section-about__text {
+  font-family: 'TT Lakes Medium';
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: #1B1C21;
+  max-width: 50%;
+  padding-right: 20px;
+  padding-left: 32px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.section-about__text .section-about__btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1B1C21;
+  font-weight: normal;
+}
+
+
+.btn__show_text::before {
+  content: "";
+  background: url(../img/close-icon.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 50px;
+}
+
+.btn__close_text::before {
+  content: "";
+  background: url(../img/expand.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 50px;
+}
+
+.section-about__photo__img {
+  width: 90%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
