@@ -21,13 +21,15 @@
 * {
   box-sizing: border-box;
 }
-.container{
+
+.container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
 }
+
 .container-wrapper {
-  max-width: 1120px;
+  max-width: 78%;
   background: #F8F8F8;
   position: relative;
   margin: 0 auto;
@@ -47,7 +49,7 @@
   overflow-y: auto;
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .mobile-menu {
     position: fixed;
     left: 0;
@@ -65,6 +67,10 @@
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
 
+  }
+
+  .container-wrapper {
+    max-width: 100%;
   }
 }
 
@@ -95,7 +101,7 @@
   background: #FF3E79 url(../img/close.svg) no-repeat 50% 50%;
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .close-icon {
     display: block;
   }
@@ -278,6 +284,7 @@
       display: flex;
       align-items: center;
       justify-content: baseline;
+      padding-right: 24px;
 
       .upper__phone-icon {
         display: block;
@@ -327,10 +334,10 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1399px) {
   .top {
     display: block;
-    max-width: 1400px;
+    max-width: 100%;
   }
 }
 
@@ -350,8 +357,9 @@
   position: fixed;
   overflow: hidden;
 }
-@media screen and (max-width: 350px){
-  *{
+
+@media screen and (max-width: 350px) {
+  * {
     width: 320px;
   }
 }
@@ -425,11 +433,11 @@
     padding: 0;
 
 
-    @media (min-width: 1024px) {
+    @media screen and (min-width: 1024px) {
       flex-wrap: wrap;
     }
 
-    @media (max-width: 1025px) {
+    @media screen and (max-width: 1025px) {
       overflow: scroll;
     }
   }
@@ -553,27 +561,18 @@
   margin-top: 30px;
 }
 
-@media (min-width: 750px) and (max-widht: 900px) {
-  .block-repair-brand__lists:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
 .block-repair-brand__lists {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  justify-content: center;
+  padding-left: 0;
 }
 
-.block-repair-technik__cards {
-  background: #F8F8F8;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-top: 24px;
+@media (min-width: 750px) and (max-widht: 900px) {
+  .block-repair-brand__lists {
+    margin-right: 0;
+    padding-left: 0;
+  }
 }
 
 // @media screen and (max-width: 730px) {
@@ -590,55 +589,23 @@
 //   }
 // }
 
-.block-repair-technik {
-  .tech__card__list {
-    width: 240px;
-    height: 160px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    border: 1px solid #EAEAEA;
-    box-sizing: border-box;
-    border-radius: 6px;
-    background: #FFFFFF;
-    position: relative;
-    margin-right: 32px;
-    margin-bottom: 16px;
-
-    .tech__card__nav {
-      text-decoration: none;
-      font-family: 'TT Lakes Redular', sans-serif;
-      font-size: 16px;
-      font-weight: normal;
-      line-height: 24px;
-      color: #1B1C21;
-      position: relative;
-      padding: 16px;
-    }
-  }
-}
-
 // @media screen and (min-width: 1440px) {
 //   .tech__hidden:nth-child(n+5) {
 //     display: none;
 //   }
 // }
 
-@media screen and (max-width: 770px) {
-  .tech__card__list {
-    margin-right: 24px;
-  }
-}
+// @media screen and (max-width: 770px) {
+//   .tech__card__list {
+//     margin-right: 24px;
+//   }
+// }
 
 
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .hidden:nth-child(n+9) {
     display: none;
-  }
-
-  .repair-tech__cards {
-    justify-content: center;
   }
 
   .tech__hidden:nth-child(n+5) {
@@ -648,6 +615,10 @@
 
 @media (min-width: 750px) and (max-width: 900px) {
   .hidden:nth-child(n+7) {
+    display: none;
+  }
+
+  .tech__hidden:nth-child(n+4) {
     display: none;
   }
 }
@@ -671,17 +642,57 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 760px) and (max-widht: 1000px) {
+@media screen and (max-width: 769px) {
   .card__list {
     margin-top: 16px;
-    width: 224px;
-    margin-right: 24px;
+    width: 220px;
+    margin-right: 20px;
   }
 }
 
-@media (min-width: 750px) and (max-widht: 900px) {
-  .card__list:nth-child(3n) {
-    margin-right: 0;
+.block-repair-technik__cards {
+  background: #F8F8F8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+}
+
+
+.tech__card__list {
+  width: 240px;
+  height: 160px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  margin-right: 32px;
+  margin-bottom: 16px;
+
+  .tech__card__nav {
+    text-decoration: none;
+    font-family: 'TT Lakes Redular', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #1B1C21;
+    position: relative;
+    padding: 16px;
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  .tech__card__list {
+    width: 220px;
+    margin-right: 20px;
   }
 }
 
@@ -990,7 +1001,8 @@
     line-height: 16px;
     color: #7E7E82;
   }
-  .main-footer__text{
+
+  .main-footer__text {
     text-align: right;
   }
 }
