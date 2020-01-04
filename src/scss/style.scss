@@ -358,12 +358,6 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 350px) {
-  * {
-    width: 320px;
-  }
-}
-
 // HEADER
 .header {
   padding-top: 42px;
@@ -389,6 +383,12 @@
 
 .header-services {
   display: inline-block;
+}
+
+@media screen and (max-width: 1399px) {
+  .header-services {
+    display: none;
+  }
 }
 
 .header-services__list {
@@ -477,6 +477,14 @@
   width: 100%;
 }
 
+@media screen and (max-width: 760px) {
+  .section-about {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .section-about__text {
   font-family: 'TT Lakes Medium';
   font-size: 14px;
@@ -489,6 +497,14 @@
 
   p {
     margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  .section-about__text {
+    padding: 0;
+    max-width: 100%;
   }
 }
 
@@ -531,6 +547,13 @@
   -o-border-radius: 10px;
 }
 
+
+@media screen and (max-width: 760px) {
+  .section-about__photo__img {
+    width: 100%;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -559,6 +582,7 @@
 .block-repair-technik {
   padding-left: 32px;
   margin-top: 30px;
+  overflow: hidden;
 }
 
 .block-repair-brand__lists {
@@ -568,10 +592,9 @@
   padding-left: 0;
 }
 
-@media (min-width: 750px) and (max-widht: 900px) {
+@media screen and (max-width: 600px) {
   .block-repair-brand__lists {
-    margin-right: 0;
-    padding-left: 0;
+    flex-wrap: nowrap;
   }
 }
 
@@ -647,6 +670,7 @@
     margin-top: 16px;
     width: 220px;
     margin-right: 20px;
+    flex-shrink: 0;
   }
 }
 
@@ -659,6 +683,13 @@
   margin: 0;
   padding: 0;
   margin-top: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .block-repair-technik__cards {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
 }
 
 
@@ -693,6 +724,7 @@
   .tech__card__list {
     width: 220px;
     margin-right: 20px;
+    flex-shrink: 0;
   }
 }
 
@@ -864,30 +896,13 @@
 @media screen and (max-width: 730px) {
   .mobile-table-container {
     display: flex;
-    flex-direction: column;
-    margin-left: 8px;
     margin-top: 16px;
+    flex-shrink: 0;
+    overflow: hidden;
 
-    // .table-slider-wrapper {
-    //   display: flex;
-    //   flex-direction: row;
-    // }
-  }
-
-  .mobile-table {
-    margin-right: 10px;
-  }
-
-  .main-footer {
-    flex-direction: column;
-    padding: 0;
-    justify-content: center;
-  }
-
-  .main-footer__author,
-  .main-footer__policy,
-  .main-footer__text {
-    padding-bottom: 10px;
+    .table-slider-wrapper {
+      display: flex;
+    }
   }
 
   .content__th {
@@ -938,13 +953,17 @@
 
   .mobile-table {
     background: #FFFFFF;
-    max-width: 260px;
-    max-height: 200px;
+    width: 260px;
+    height: 200px;
     border-radius: 6px;
+    margin-right: 16px;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .mobile-table__content {
     padding: 16px;
+    width: 100%;
   }
 
   .content_body__inline {
@@ -982,10 +1001,27 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .block-text {
+    margin: 0;
+
+    .block-text__info {
+      padding-top: 16px;
+      padding-left: 16px;
+    }
+
+    .block-text__offer {
+      padding-left: 16px;
+      width: 90%;
+    }
+  }
+}
+
 /* --- MAIN-FOOTER --- */
 
 .main-footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   margin-top: 50px;
@@ -1004,5 +1040,22 @@
 
   .main-footer__text {
     text-align: right;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .main-footer {
+    margin-top: 16px;
+    position: relative;
+    padding: 16px;
+
+
+    .main-footer__author,
+    .main-footer__policy,
+    .main-footer__text {
+      text-align: center;
+      padding-bottom: 16px;
+    }
   }
 }
