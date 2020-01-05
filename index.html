@@ -8,6 +8,7 @@
   <meta name="description" content="Сервис для ремонта телефонов, планшетов, ноутбуков и ПК">
   <meta name="keywords" content="Сервис, ремонт">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
 <link href="style.css" rel="stylesheet"></head>
 
@@ -128,7 +129,7 @@
       </section>
       <h1 class="section-title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
       <section class="block-repair-brand">
-        <div class="slide-brand swiper-container">
+        <div class="slide-brand swiper-container js-brands-swiper">
           <ul class="block-repair-brand__lists swiper-wrapper">
             <li class="card__list hidden swiper-slide">
               <div class="card-logo"><img src="./img/Bitmap.svg" alt="lenovo"></div>
@@ -189,7 +190,7 @@
       </section>
       <h1 class="section-title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h1>
       <section class="block-repair-technik">
-        <div class="swiper-container">
+        <div class="swiper-container js-repair-swiper">
           <ul class="block-repair-technik__cards swiper-wrapper">
             <li class="tech__card__list tech__hidden swiper-slide">
               <a href="#" class="tech__card__nav">Ремонт ноутбуков</a>
@@ -268,7 +269,7 @@
         </table>
       </section>
       
-      <div class="mobile-table-container swiper-container">
+      <div class="mobile-table-container swiper-container js-table-swiper">
         <div class="table-slider-wrapper swiper-wrapper">
           <div class="mobile-table swiper-slide">
             <div class="mobile-table__content">
@@ -526,7 +527,7 @@
       </form>
     </div>
   </section>
-
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 
 </html>
