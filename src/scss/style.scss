@@ -36,7 +36,7 @@
 }
 
 // фон для контейнера
-.container-bg{
+.container-bg {
   background: #fff;
 }
 
@@ -275,6 +275,10 @@
         width: 2px;
         height: 32px;
         background: #EAEAEA;
+
+        @media screen and (max-width: 325px) {
+          display: none;
+        }
       }
 
       .upper-menu__logo {
@@ -285,11 +289,21 @@
       }
     }
 
+    @media screen and (max-width: 325px) {
+      .upper-menu__logo {
+        margin-left: 6px;
+      }
+    }
+
     .upper-menu__right {
       display: flex;
       align-items: center;
       justify-content: baseline;
       padding-right: 24px;
+
+      @media screen and (max-width: 325px) {
+        padding-right: 16px;
+      }
 
       .upper__phone-icon {
         display: block;
@@ -344,23 +358,6 @@
     display: block;
     max-width: 100%;
   }
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.01);
-}
-
-.hidden-container {
-  display: block;
-  opacity: 0.04;
-  position: fixed;
-  overflow: hidden;
 }
 
 // HEADER
@@ -473,6 +470,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .navbar {
+    padding-left: 16px;
+  }
+}
+
 //SECTION ABOUT
 .section-about {
   display: flex;
@@ -543,6 +546,21 @@
   left: 50px;
 }
 
+@media screen and (max-width: 760px) {
+  .section-about__btn {
+    margin-left: 24px;
+    padding-bottom: 16px;
+  }
+
+  .btn__show_text::before {
+    left: 8px;
+  }
+
+  .btn__close_text::before {
+    left: 8px;
+  }
+}
+
 .section-about__photo__img {
   width: 90%;
   border-radius: 10px;
@@ -582,12 +600,22 @@
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
+@media screen and (max-width: 400px) {
+  .section-title {
+    margin-top: 24px;
+  }
+}
+
 // BRAND 
 .block-repair-brand,
 .block-repair-technik {
   padding-left: 32px;
   margin-top: 30px;
   overflow: hidden;
+
+  @media screen and (max-width: 325px) {
+    padding-left: 16px;
+  }
 }
 
 .block-repair-brand__lists {
@@ -600,6 +628,11 @@
 @media screen and (max-width: 600px) {
   .block-repair-brand__lists {
     flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .block-repair-technik__cards {
+    justify-content: flex-start;
   }
 }
 
@@ -665,7 +698,14 @@
 @media screen and (max-width: 600px) {
   .block-repair-technik__cards {
     flex-wrap: nowrap;
-    overflow: hidden;
+    justify-content: flex-start;
+
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .block-repair-technik__cards {
+    padding-bottom: 20px;
   }
 }
 
@@ -758,6 +798,14 @@
   position: relative;
   background-color: transparent;
   margin-left: 12px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .btn-cards,
+  .tech-btn-cards {
+    display: none;
+  }
 }
 
 .btn__show::before {
@@ -945,6 +993,13 @@
 
   .content_body__inline {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .table-slider-wrapper {
+    padding-bottom: 40px;
+    padding-left: 8px;
   }
 }
 
