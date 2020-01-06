@@ -72,6 +72,8 @@ openPopupButton.addEventListener('click', function (evt) {
   popup.classList.add('modal--show');
   containerBackground.classList.add('container-bg');
   openButtonFeedback.classList.remove('modal--show');
+  menu.classList.remove('menu_active');
+
 });
 
 closePopupButton.addEventListener('click', function () {
@@ -94,6 +96,7 @@ openButtonFeedback.addEventListener('click', function (evt) {
   evt.preventDefault();
   feedback.classList.add('modal--show');
   openPopupButton.classList.remove('modal--show');
+  menu.classList.remove('menu_active');
 });
 
 closeFeedbackButton.addEventListener('click', function () {
@@ -145,6 +148,9 @@ document.addEventListener('keydown', function (evt) {
     feedback.classList.remove('modal--show');
   }
 });
+
+
+
 
 
 // OPEN MENU 768px
